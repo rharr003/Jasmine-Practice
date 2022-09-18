@@ -30,5 +30,6 @@ describe("Payments tests", function () {
   afterEach(function () {
     paymentId = 0;
     paymentTbody.innerHTML = "";
+    summaryTds.innerHTML = "";
   });
 });

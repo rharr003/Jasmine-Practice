@@ -19,10 +19,16 @@ describe("Helper function tests", function () {
     appendTd(newTr, 100);
     expect(newTr.firstChild.innerText).toEqual("100");
   });
+  it("should create a new td button", function () {
+    let newTr = document.createElement("tr");
+    appendDeleteButton(newTr);
+    expect(newTr.firstChild.innerText).toEqual("X");
+  });
   afterEach(function () {
     allPayments = {};
     updateSummary();
     paymentTbody.innerHTML = "";
     paymentId = 0;
+    summaryTds.innerHTML = "";
   });
 });
